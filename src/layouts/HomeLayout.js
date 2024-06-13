@@ -33,7 +33,6 @@ export default class HomeLayout extends Component {
     // console.log(id);
     const {todoList}=this.state
     const result = todoList.filter((todo) =>  {return todo.id !==id});
-    // console.log(result)
     this.setState({todoList:result})
   };
 
