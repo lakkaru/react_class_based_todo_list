@@ -29,9 +29,14 @@ export default class HomeLayout extends Component {
     });
   };
 
-  handleDelete = () => {
-    // console.log('delete');
+  handleDelete = (id) => {
+    // console.log(id);
+    const {todoList}=this.state
+    const result = todoList.filter((todo) =>  {return todo.id !==id});
+    // console.log(result)
+    this.setState({todoList:result})
   };
+
   render() {
     const { todoList, inputValue, isDisabled } = this.state;
     const emptyList = !todoList.length;

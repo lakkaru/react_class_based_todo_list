@@ -11,7 +11,7 @@ export default class TodoListLayout extends Component {
           return (
             <SingleTodo
               key={key}
-              no={id}
+              id={id}
               todo={title}
               handleDelete={handleDelete}
             />

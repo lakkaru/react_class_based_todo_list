@@ -10,7 +10,7 @@ export default class SingleTodo extends Component {
   };
 
   render() {
-    const { todo, no, handleDelete } = this.props;
+    const { todo, id, handleDelete } = this.props;
     const { checked } = this.state;
     return (
       <div style={{ display: "flex", justifyContent:'space-between', marginBottom:'1rem', width:'350px' }}>
@@ -21,11 +21,13 @@ export default class SingleTodo extends Component {
             this.checkState(e);
           }}
         />
+        <div style={{display:'flex', justifyContent:'space-between'}}>
+        <span style={{marginRight:'20px' }}>{id}</span>
         <p style={{margin:"0"}}>
-          <span style={{ }}>{no}</span>
+          
           {todo}
-        </p>
-        <button style={{}} onClick={()=>{handleDelete()}}>Delete</button>
+        </p></div>
+        <button style={{color:'tomato', fontWeight:'bold'}} onClick={()=>{handleDelete(id)}}>Delete</button>
       </div>
     );
   }
